@@ -187,5 +187,10 @@ footer {
 
 /* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
     @media (max-width: 728px) {
-
+        .row {
+            flex-direction: column;
+        }
+        .home__description {
+            margin-bottom: 24px;
+        }
     }
