@@ -27,6 +27,11 @@ p {
 a {
     text-decoration: none;
     position: relative;
+    transition: opacity 300ms ease;
+}
+
+a:hover {
+    opacity: 0.7;
 }
 
 .link__hover-effect:after {
@@ -159,15 +164,19 @@ nav {
     overflow: hidden;
     box-shadow: 0 18px 16px rgba(0, 0, 0, 0.16);
     margin-bottom: 28px;
+    animation: anaimate-profile-picture 800ms 200ms backwards;
 }
 
 @keyframes anaimate-profile-picture {
     0% {
         transform: scale(0);
     }
-    80% (
+    80% {
         transform: scale(1.1);
-    )
+    }
+    100% {
+        transform: scale(1)
+    }
 }
 
 .about-me__picture {
@@ -179,19 +188,16 @@ nav {
     padding-top: 8px;
 } 
 
-.about--me__info--title {
+.about-me__info--title {
     margin-bottom: 28px;
+    animation: fade-up 650ms;
+    animation: fade-up 800ms 400ms;
 }
 
 .about-me__info--para {
     font-size: 20px;
     margin-bottom: 28px;
-}
-
-.about-me__link {
-    font-size: 20px;
-    color: black;
-    padding: 1 16px;
+    animation: fade-up 800ms 600ms;
 }
 
 .about-me__link {
@@ -200,14 +206,56 @@ nav {
     padding: 0 16px;
 }
 
+.about-me__links {
+    animation: fade-up 800ms 800ms;
+}
+
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .about-me__img--container {
     flex: 1;
     display: flex;
     align-items: center;
 }
 
-.about-me__img-- {
-    width: 100%
+.about-me__img {
+    width: 100;
+    animation: fade-in 1200ms 800ms backwards; 
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.wave {
+    display: inline-block;
+    animation: animate-wave 500ms infinite ease-in-out;
+}
+
+@keyframes animate-wave {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
 }
 
 /* TECH - STACK */
