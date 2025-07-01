@@ -184,7 +184,7 @@ nav {
     
     /* Improving my own picture */ 
     
-    transform:scale(1.5);
+    transform:scale(1.8);
     padding-top: 8px;
 } 
 
@@ -408,9 +408,20 @@ footer {
     padding: 8% 0;
 }
 
+.footer__logo {
+    width: 100%;
+    max-width: 1000px;
+    transition: all 0.3s ease;
+}
+
 .footer__logo--img {
     width: 70px;
     height: 70px;
+}
+
+.footer__logo--img:hover {
+    transform: scale(1.05);
+    color: #532a82;
 }
 
 .footer__social--link,
